@@ -1,9 +1,9 @@
-from django.urls import path
-from . import views
-urlpatterns = [
-    path('', views.home, name='home'),
-    path('signup', views.signup, name='signup'),
-    path('signin', views.signin, name='signin'),
-    path('products', views.products, name='products'),
-]
+from django.contrib import admin
+from django.urls import include, path
 
+import store
+
+urlpatterns = [
+    path('', include('store.urls')),
+    path('admin/',admin.site.urls),
+]
