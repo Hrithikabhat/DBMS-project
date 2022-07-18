@@ -1,0 +1,55 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vendor</title>
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/23412c6a8d.js"></script>
+    <!--Slick Slider-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!--Custom Stylesheet-->
+    <!--<link rel="stylesheet" href="{% static '/css/style.css'%}" />-->
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/vendor.css'%}" />
+</head>
+
+<body>
+    <form action method="post">
+
+        <h1><strong>Vendor Page</strong></h1>
+
+        <div class="form-group">
+            <label for="title">Title <span>Use title case to get a better result</span></label>
+            <input type="text" name="title" id="title" class="form-controll" />
+        </div>
+        <div class="form-group">
+            <label for="caption">Caption <span>This caption should be descriptiv</span></label>
+            <input type="text" name="caption" id="caption" class="form-controll" />
+        </div>
+
+        <div class="form-group file-area">
+            <label for="images">Images <span>Your images should be at least 400x300 wide</span></label>
+            <input type="file" name="images" id="images" required="required" multiple="multiple" />
+            <div class="file-dummy">
+                <div class="success">Great, your files are selected. Keep on.</div>
+                <div class="default">Please select some files</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Upload images</button>
+        </div>
+
+    </form>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700" rel="stylesheet" type="text/css">
+
+</body>
+
+</html>

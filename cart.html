@@ -1,0 +1,120 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/23412c6a8d.js"></script>
+    <!--Slick Slider-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!--Custom Stylesheet-->
+    <link rel="stylesheet" href="{% static '/css/st.css'%}" />
+    <link rel="stylesheet" href="{% static '/css/style.css'%}" />
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-12">
+                    <div class="btn-group">
+                        <button class="btn border my-md-4 my-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD</button>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 text-center">
+                    <h2 class="my-md-3 site-title primary-color">HomeDeck</h2>
+                </div>
+                <div class="col-md-4 col-12 text-right">
+                    <p class="my-md-4 header-links">
+                        <a href="{% url 'signin'%}" class="px-2">Sign In</a>
+                        <a href="{% url 'signup'%}" class="px-1">Sign Up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="container">
+        <div class="order_summary">
+            <h1>Order Summary</h1>
+            <div class="summary_card">
+                <div class="card_item">
+                    <div class="product_img">
+                        <img src="{% static '/assets/p9.jpg'%}" alt="" />
+                    </div>
+                    <div class="product_info">
+                        <h1>Four</h1>
+                        <p>Antonio Queen-Size Bed-White</p>
+                        <div class="close-btn">
+                            <i class="fa fa-close"></i>
+                        </div>
+                        <div class="product_rate_info">
+                            <h1>$2450</h1>
+                            <span class="pqt-minus">-</span>
+                            <span class="pqt">1</span>
+                            <span class="pqt-plus">+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="product_img">
+                        <img src="{% static '/assets/p8.jpg'%}" alt="" />
+                    </div>
+                    <div class="product_info">
+                        <h1>Four</h1>
+                        <p>Costa Day Single Bed</p>
+                        <div class="close-btn">
+                            <i class="fa fa-close"></i>
+                        </div>
+                        <div class="product_rate_info">
+                            <h1>$483</h1>
+                            <span class="pqt-minus">-</span>
+                            <span class="pqt">1</span>
+                            <span class="pqt-plus">+</span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="order_price">
+                    <p>Order summary</p>
+                    <h4>$400</h4>
+                </div>
+                <div class="order_service">
+                    <p>Additional Service</p>
+                    <h4>$10</h4>
+                </div>
+                <div class="order_total">
+                    <p>Total Amount</p>
+                    <h4>$370</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <img src="{% static '/assets/logo.png'%}" class="logo" alt="">
+        </div>
+        <p class="footer-title">About Us!</p>
+        <p class="info">At HomeDeck, we have been motivated by a desire to better serve our customers for more than 40 years, gracing their homes with the style, sophistication, elegance and warmth that captures the essence of those who live in them. Being a family-owned
+            firm, we understand the value of establishing true lasting relationships with our clients, and we embrace the opportunities we have to create their dream homes. Customer service is the cornerstone of our company, and from concept to completion,
+            our licensed design team will honor your style and functional needs while guiding you through the process and exceeding your every expectation.
+        </p>
+        <p class="info">support emails - help@HomeDeck.com, customersupport@homedeck.com</p>
+        <p class="info">telephone - 180 78 00 781, 182 76 90 902</p>
+        <p class="footer-credit">HomeDeck, Interior that reflects you! </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="{% static '/js/main.js'%}"></script>
+</body>
+
+</html>

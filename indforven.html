@@ -1,0 +1,242 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/23412c6a8d.js"></script>
+    <!--Slick Slider-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!--Custom Stylesheet-->
+    <link rel="stylesheet" href="{% static '/css/style.css'%}" />
+
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-12">
+                    <div class="btn-group">
+                        <button class="btn border my-md-4 my-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD</button>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 text-center">
+                    <h2 class="my-md-3 site-title primary-color">HomeDeck</h2>
+                </div>
+                <div class="col-md-4 col-12 text-right">
+                    <p class="my-md-4 header-links">
+                        <a class="nav-link" href="#">Logout <span class="sr-only">(current)</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products' %}">PRODUCTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'vendor' %}">ADD PRODUCTS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-nav">
+                    <!--<li class="nav-item border rounded-circle mx-2 search-icon">
+                        <i class="fas fa-search p-2"></i>
+                    </li>-->
+
+                    <a href="#">
+                        <li class="nav-item border rounded-circle mx-2 basket-icon">
+                            <i class="fas fa-shopping-basket p-2"></i>
+                        </li>
+                    </a>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--/header-->
+    <!--Main Section -->
+    <main>
+        <!--First Slider-->
+        <div class="container-fluid p-0">
+            <div class="site-slider">
+                <div class="slider-one">
+                    <div>
+                        <img src="{% static '/assets/home.jpg'%}" class="img-fluid" alt="Banner 1" />
+                        <div class="a">WELCOME</div>
+                        <div class="b">Designs exceeding your expectations!</div>
+                    </div>
+                    <div>
+                        <img src="{% static '/assets/home2.jpg'%}" class="img-fluid" alt="Banner 2" />
+                    </div>
+                    <div>
+                        <img src="{% static '/assets/home3.jpg'%}" class="img-fluid" alt="Banner 3" />
+                    </div>
+                </div>
+                <div class="slider-btn">
+                    <span class="prev position-top"><i class="fas fa-chevron-left"></i></span>
+                    <span class="next position-top right-0"><i class="fas fa-chevron-right"></i></span>
+                </div>
+            </div>
+        </div>
+        <!--/First Slider-->
+        <section class="product">
+            <center>
+                <h2 class="product-category">Featured Products</h2>
+                <p class="text-secondary ">
+                    Best of brands at your doorstep! Hurry now and decorate your homes to suit your style!
+                </p>
+            </center>
+
+        </section>
+        <!--Second Slider-->
+        <div class="container-fluid">
+            <div class="product-container">
+                <div class="site-slider-two px-md-4">
+                    <div class="row slider-two text-center">
+                        <div class="col-md-2 product pt-md-5 pt-4">
+                            <div class="product-image">
+                                <span class="new-tag">New Arrivals!</span>
+                                <img src="{% static '/assets/p1.jpg'%}" class="product-thumb" alt="">
+                                <button class="card-btn">Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">Four</h2>
+                                <p class="product-short-des">Riki Grey Fabric 3 Seater Sofa</p>
+                                <span class="price">$1175</span><span class="actual-price">$1679</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 product pt-md-5 pt-4">
+                            <div class="product-image">
+                                <span class="new-tag">New Arrivals!</span>
+                                <img src="{% static '/assets/p2.jpg'%}" class="product-thumb" alt="">
+                                <button class="card-btn">Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">Nicholas Barringha</h2>
+                                <p class="product-short-des">Helios Forest Green 3 Seater Sofa</p>
+                                <span class="price">$2099</span><span class="actual-price">$2999</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 product pt-md-5 pt-4">
+                            <div class="product-image">
+                                <span class="new-tag">New Arrivals!</span>
+                                <img src="{% static '/assets/p4.jpg'%}" class="product-thumb" alt="">
+                                <button class="card-btn">Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">Kimoto</h2>
+                                <p class="product-short-des">Aesthetic Wall Decor Frames</p>
+                                <span class="price">$45</span><span class="actual-price">$65</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 product pt-md-5 pt-4">
+                            <div class="product-image">
+                                <span class="new-tag">New Arrivals!</span>
+                                <img src="{% static '/assets/p5.jpg'%}" class="product-thumb" alt="">
+                                <button class="card-btn">Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">Kimoto</h2>
+                                <p class="product-short-des">Ceramic Brown Planter</p>
+                                <span class="price">$200</span><span class="actual-price">$285</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 product pt-md-5 pt-4">
+                            <div class="product-image">
+                                <span class="new-tag">New Arrivals!</span>
+                                <img src="{% static '/assets/p6.jpg'%}" class="product-thumb" alt="">
+                                <button class="card-btn">Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">Louisa*More</h2>
+                                <p class="product-short-des">Riki Black Antique Set</p>
+                                <span class="price">$699</span><span class="actual-price">$999</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 product pt-md-5 pt-4">
+                            <div class="product-image">
+                                <span class="new-tag">New Arrivals!</span>
+                                <img src="{% static '/assets/p7.jpg'%}" class="product-thumb" alt="">
+                                <button class="card-btn">Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">Louisa*More</h2>
+                                <p class="product-short-des">Ceramic Hanukkah Candle Holder</p>
+                                <span class="price">$79</span><span class="actual-price">$113</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 product pt-md-5 pt-4">
+                            <div class="product-image">
+                                <span class="new-tag">New Arrivals!</span>
+                                <img src="{% static '/assets/p8.jpg'%}" class="product-thumb" alt="">
+                                <button class="card-btn">Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">Four</h2>
+                                <p class="product-short-des">Costa Day Single Bed</p>
+                                <span class="price">$483</span><span class="actual-price">$690</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 product pt-md-5 pt-4">
+                            <div class="product-image">
+                                <span class="new-tag">New Arrivals!</span>
+                                <img src="{% static '/assets/p9.jpg'%}" class="product-thumb" alt="">
+                                <button class="card-btn">Add To Cart</button>
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">Four</h2>
+                                <p class="product-short-des">Antonio Queen-Size Bed-White</p>
+                                <span class="price">$2450</span><span class="actual-price">$3500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-btn">
+                        <span class="prev position-top"><i class="fas fa-chevron-left fa-2x text-secondary"></i></span>
+                        <span class="next position-top right-0"><i class="fas fa-chevron-right fa-2x text-secondary"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Second Slider-->
+    </main>
+    <!--/Main Section -->
+    <footer>
+        <div class="footer-content">
+            <img src="{% static '/assets/logo.png'%}" class="logo" alt="">
+        </div>
+        <p class="footer-title">About Us!</p>
+        <p class="info">At HomeDeck, we have been motivated by a desire to better serve our customers for more than 40 years, gracing their homes with the style, sophistication, elegance and warmth that captures the essence of those who live in them. Being a family-owned
+            firm, we understand the value of establishing true lasting relationships with our clients, and we embrace the opportunities we have to create their dream homes. Customer service is the cornerstone of our company, and from concept to completion,
+            our licensed design team will honor your style and functional needs while guiding you through the process and exceeding your every expectation.
+        </p>
+        <p class="info">support emails - help@HomeDeck.com, customersupport@homedeck.com</p>
+        <p class="info">telephone - 180 78 00 781, 182 76 90 902</p>
+        <p class="footer-credit">HomeDeck, Interior that reflects you! </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="{% static '/js/main.js'%}"></script>
+</body>
+
+</html>
